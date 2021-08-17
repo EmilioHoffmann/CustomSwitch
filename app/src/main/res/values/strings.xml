@@ -2,4 +2,6 @@
     <string name="app_name">CustomSwitch</string>
     <string name="first_option_selected">First Option selected</string>
     <string name="second_option_selected">Second Option selected</string>
+    <string name="first_option">First</string>
+    <string name="second_option">Second</string>
 </resources>

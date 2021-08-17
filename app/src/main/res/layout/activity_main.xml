@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:firstOption="Teste"
+        app:firstOption="@string/first_option"
         app:layout_constraintTop_toTopOf="parent"
-        app:secondOption="Second" />
+        app:secondOption="@string/second_option" />
 
     <ViewFlipper
         android:id="@+id/mainViewFlipper"

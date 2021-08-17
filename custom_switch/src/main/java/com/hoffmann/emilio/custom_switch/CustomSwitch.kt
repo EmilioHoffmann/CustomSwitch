@@ -21,14 +21,14 @@ class CustomSwitch @JvmOverloads constructor(
 
     init {
         context.withStyledAttributes(attrs, R.styleable.CustomSwitch, 0, 0) {
-            setTexts(
+            setOptionsLabels(
                 getString(R.styleable.CustomSwitch_firstOption) ?: "",
                 getString(R.styleable.CustomSwitch_secondOption) ?: ""
             )
         }
     }
 
-    private fun setTexts(firstOption: String, secondOption: String) {
+    fun setOptionsLabels(firstOption: String, secondOption: String) {
         binding.firstOptionText.text = firstOption
         binding.secondOptionText.text = secondOption
     }
