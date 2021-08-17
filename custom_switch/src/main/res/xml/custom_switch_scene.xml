@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/selectedIndicator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/guidelineMiddle"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Constraint android:id="@+id/firstOptionText">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/custom_switch_selected_text_color" />
+        </Constraint>
+
+        <Constraint android:id="@+id/secondOptionText">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/custom_switch_default_text_color" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/selectedIndicator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineMiddle" />
+
+        <Constraint
+            android:id="@+id/guidelineMiddle"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Constraint android:id="@+id/firstOptionText">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/custom_switch_default_text_color" />
+        </Constraint>
+
+        <Constraint android:id="@+id/secondOptionText">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/custom_switch_selected_text_color" />
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="300" />
+</MotionScene>

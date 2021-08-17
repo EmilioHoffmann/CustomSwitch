@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomSwitch">
+        <attr name="firstOption" format="reference|string" />
+        <attr name="secondOption" format="reference|string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/custom_switch_background"
+    app:layoutDescription="@xml/custom_switch_scene">
+
+    <TextView
+        android:id="@+id/firstOptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:clickable="false"
+        android:elevation="2dp"
+        android:enabled="true"
+        android:focusable="false"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:textColor="@color/custom_switch_selected_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="FIRST OPTION" />
+
+    <View
+        android:id="@+id/firstOptionSection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/secondOptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:clickable="false"
+        android:elevation="2dp"
+        android:enabled="false"
+        android:focusable="false"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:textColor="@color/custom_switch_default_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineMiddle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SECOND OPTION" />
+
+    <View
+        android:id="@+id/secondOptionSection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineMiddle" />
+
+    <View
+        android:id="@+id/selectedIndicator"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_switch_background_selected"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMiddle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
